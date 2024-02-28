@@ -1,0 +1,12 @@
+<h1>Result</h1>
+
+<% case @result
+when 'win' %>
+<p><strong>Congratulations!</strong> "<%=@word %>"" is a valid English word!</p>
+<% when 'over'%>
+<p>Sorry but <strong><%=@word %></strong> can't be built out of "<%= @letter_array.join(",") %>"!</p>
+<% else %>
+<p>Sorry but <strong><%=@word %></strong> is not seem as a valid English word!</p>
+<% end%>
+
+<%= link_to("Play again", new_path) %>
